@@ -1,0 +1,1 @@
+Para executar o programa digite "python lexico.py" no prompt de comando
