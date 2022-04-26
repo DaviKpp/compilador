@@ -12,6 +12,7 @@ scout = 0
 arrToken = []
 espaco = " "
 r = r + espaco
+f = open("lexico.txt", "w")
 while scout < len(r):
     #Inteiros
     sentinela, scout = constant.crawler(r, constant.inteiro, sentinela, scout, 'inteiro', arrToken)
@@ -19,4 +20,4 @@ while scout < len(r):
     #Id
     sentinela, scout = constant.crawler(r, constant.alfabeto, sentinela, scout, 'id', arrToken)
     scout = scout + 1
-
+    
