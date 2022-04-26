@@ -12,12 +12,31 @@ scout = 0
 arrToken = []
 espaco = " "
 r = r + espaco
-f = open("lexico.txt", "w")
+linha = 0
+coluna = 0
 while scout < len(r):
+    temp = scout
+
+    #Operador
+    constant.simplecrawler(r, sentinela, scout, arrToken, linha, coluna)
+
     #Inteiros
     sentinela, scout = constant.crawler(r, constant.inteiro, sentinela, scout, 'inteiro', arrToken)
     
     #Id
     sentinela, scout = constant.crawler(r, constant.alfabeto, sentinela, scout, 'id', arrToken)
-    scout = scout + 1
     
+    if scout == temp:
+        
+        
+        
+        scout = scout + 1
+f = open('lexico.txt', 'w')
+for x in arrToken:
+    
+    if x.erro == 1:
+        print("Erro léxico")
+    else:
+        if re.match(constant.palavrarese, x.lexema):
+            x.tipo = 'palavra-reservada'
+        f.write('<'+ x.lexema + ',' + x.tipo + '>' + '\n')
