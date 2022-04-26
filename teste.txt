@@ -1,4 +1,4 @@
 void main (){
 	for (int teste=100 ; teste > 10 ; teste ++ * )
-		printf (Uhuul)
+		printf('Uhuul')
 }

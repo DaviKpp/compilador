@@ -21,6 +21,6 @@
 <),fechaparenteses>
 <printf,palavra-reservada>
 <(,abreparenteses>
-<Uhuul,id>
+<'Uhuul',literal>
 <),fechaparenteses>
 <},fechachave>

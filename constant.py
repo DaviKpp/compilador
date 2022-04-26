@@ -2,12 +2,12 @@ import constant
 import re
 
 inteiro = "^[-+]?[0-9]+$"
-alfabeto = "[a-zA-Z]"
-palavrarese = "(void|main|printf|for|while|do|if|else|int|float|char|double|long)"
+alfabeto = "['a-zA-Z]"
+palavrarese = "(void|main|printf|for|while|do|if|else|int|float|char|double|long|break)"
 delimitador = "[\s|\n|+|-|,|{|}|(|)|;|/|=|*|<|>]"
-deli = "[\s|(|)|;|+|=|{|}]"
+deli = "[\s|(|)|;|+|=|{|}|<|>]"
 operador = "[+|-|=|*|/|<|>]"
-literal = "['a-zA-Z']"
+literal = "'[a-zA-Z]*'"
 
 class Token:
     def __init__(self, lexema, tipo, linha, coluna, pos, erro):

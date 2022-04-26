@@ -47,7 +47,10 @@ for x in arrToken:
         print("Erro léxico!\n"+
         "Linha:" + str(x.linha) +
         "\nColuna: " + str(x.coluna))
+        print(x.lexema)
     else:
         if re.match(constant.palavrarese, x.lexema):
             x.tipo = 'palavra-reservada'
+        if re.match(constant.literal, x.lexema):
+            x.tipo = 'literal'
         f.write('<'+ x.lexema + ',' + x.tipo + '>' + '\n')
